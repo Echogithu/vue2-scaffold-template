@@ -22,13 +22,15 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
+    "chalk": "^4.1.2",
     "commitizen": "^4.2.4",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.2.1",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "yorkie": "^2.0.0"
   },
   "browserslist": [
     "> 1%",
@@ -36,13 +38,12 @@
     "not dead"
   ],
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
   },
   "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
+    "*.{js,jsx,vue}": "eslint --fix",
+    "*": "prettier -w -u"
   },
   "config": {
     "commitizen": {
