@@ -14,7 +14,7 @@
 - 单元测试
   - jest + vtu + @testing-library/vue
 - E2E 测试
-  \*cypress
+  - cypress
 
 ## Project setup
 
