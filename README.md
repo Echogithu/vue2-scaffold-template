@@ -1,5 +1,21 @@
 # vue2-scaffold-template
 
+基于 Vue2 的项目模板
+
+## Feature
+
+集成以下功能：
+
+- vue-router
+- vuex
+- eslint + prettier
+- alias
+- verify git commit message
+- 单元测试
+  - jest + vtu + @testing-library/vue
+- E2E 测试
+  \*cypress
+
 ## Project setup
 
 ```
